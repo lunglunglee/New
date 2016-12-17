@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBusBindingService", "WcfServiceBusBindingService\WcfServiceBusBindingService.csproj", "{C91B14FC-61CE-4E2C-827B-FE653179E940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBusBindingTestClient", "WcfServiceBusBindingTestClient\WcfServiceBusBindingTestClient.csproj", "{9573D380-26A9-4E3F-BC7E-9E80A45AA28A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBusBindingContract", "WcfServiceBusBindingContract\WcfServiceBusBindingContract.csproj", "{E7E7D0C8-E2A9-4CFC-A5D4-D1EF05C15FE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4202D5FB-0EBE-4F78-9B8A-9055DFD11CA9}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\UOSSLOCS.NDF\description.html = ..\..\..\..\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\UOSSLOCS.NDF\description.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C91B14FC-61CE-4E2C-827B-FE653179E940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91B14FC-61CE-4E2C-827B-FE653179E940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91B14FC-61CE-4E2C-827B-FE653179E940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91B14FC-61CE-4E2C-827B-FE653179E940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9573D380-26A9-4E3F-BC7E-9E80A45AA28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9573D380-26A9-4E3F-BC7E-9E80A45AA28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9573D380-26A9-4E3F-BC7E-9E80A45AA28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9573D380-26A9-4E3F-BC7E-9E80A45AA28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E7D0C8-E2A9-4CFC-A5D4-D1EF05C15FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E7D0C8-E2A9-4CFC-A5D4-D1EF05C15FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E7D0C8-E2A9-4CFC-A5D4-D1EF05C15FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E7D0C8-E2A9-4CFC-A5D4-D1EF05C15FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
