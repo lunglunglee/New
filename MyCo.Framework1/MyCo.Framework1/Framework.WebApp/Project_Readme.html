@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>MVC Web App</title>
+    <style>
+        body {
+            background: #fff;
+            color: #505050;
+            font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        #header {
+            background: #efefef;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0;
+            padding: 30px 30px;
+        }
+
+        #main {
+            padding: 5px 30px;
+        }
+
+        .welcome {
+            font-size: 20px;
+            color: gray;
+            padding: 0px 40px 30px 40px;
+        }
+        
+        .callout {
+            font-size: 20px;
+            color: #fff;
+            background: #969696;
+            padding: 30px 50px 30px 50px;
+            line-height: 20px;
+        }
+
+        .section {
+            width: 43.4%;
+            float: left;
+            margin: 0 0 0 8%;
+        }
+
+            .section h2 {
+                    font-size: 18px;
+                    text-transform: none;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    border: none;
+            }
+
+            .section.first {
+                margin-left: 0;
+            }
+
+                .section.first h2 {
+                    font-size: 18px;
+                    text-transform: none;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    border: none;
+                }
+
+                .section.first li {
+                    border-top: 1px solid silver;
+                    padding: 8px 0;
+                }
+
+            .section.last {
+                margin-right: 0;
+            }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+        li {
+            padding: 4px 0;
+        }
+
+        a {
+            color: #267cb2;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Welcome to your MVC Web App built for reusability!</h1>
+        <div class="welcome">
+            <p>Your new MVC Web App is build on your reusable framework powered by the Genesys Framework.</p>
+            <p>Genesys Framework helps you create a reusable framework for your business entity objects and view-model objects ...allowing your framework objects to work in MVC, WebAPI and Cross-Platform Universal Apps. Works with your existing SQL tables, and allows you to incrementally build your reusable framework one object, one page at a time.</p>            
+        </div>
+        <div class="callout">
+            <h2>What do I do next?</h2>
+            <table>
+                <tr>
+                    <td style="width:8%;vertical-align:top;"><strong>Step 1:</strong></td>
+                    <td>Publish the Framework.Database to your SQL Server by double-clicking Framework.Database\Publish\PublishToDev.publish.xml. Remember to set the SQL connection by <strong>clicking the Edit button</strong>.</td>
+                </tr>
+                <tr>
+                    <td style="width:8%;vertical-align:top;"><strong>Step 2:</strong></td>
+                    <td>Set the Framework.Entity connection strings to your SQL Server in Framework.WebApp\Local\ConnectionStrings.config.</td>
+                </tr>
+                <tr>
+                    <td style="width:8%;vertical-align:top;"><strong>Step 3: </strong></td>
+                    <td>Run the Framework.WebApp project to see the Customer Search pull a customer through CustomerInfo DAO and display the CustomerModel view model.</td>
+                </tr>
+            </table>
+            <p>To learn more, visit <a href="http://www.getframework.com">http://GetFramework.com</a></p>
+        </div>
+    </div>
+    <div id="main">
+        <div class="section first">
+            <h2>This MVC Web App consists of:</h2>
+            <ul>
+                <li>
+                    <strong>Framework.WebApp</strong> - MVC Web App project. Small starter MVC web app that creates, reads, updates and deletes your reusable framework objects in this solution.
+                </li>
+                <li>
+                    <strong>Framework.Database</strong> - SQL Server Data Tools project. Contains view/SP layer for the Framework.Entity to consume.
+                </li>
+                <li>
+                    <strong>Framework.Entity</strong> - Entity Framework/Data Access Object project. Contains EF EDMX (database first), Data Access Objects, SaveableEntity/ReadOnlyEntity base classes.
+                </li>
+                <li>
+                    <strong>Framework.Models</strong> - Cross-Platform View Models project. Contains the framework-level view models for http transport and .Serialize() built-in.
+                </li>
+                <li>
+                    <strong>Framework.Interfaces</strong> - Cross-Platform Interface project. All projects reference this project so that interfaces are enforced in all tiers, and on mobile device as well.
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Other areas of interest:</h2>
+            <ul>
+                <li>Visit the Genesys Framework at: <a href="http://getframework.com">http://GetFramework.com</a></li>
+                <li>Genesys Framework Docs: <a href="http://docs.getframework.com/reference/Genesys-Framework-Foundation">http://docs.getframework.com</a></li>
+                <li>Genesys Framework <a href="http://www.github.com/GenesysSource/Extensions">Extensions on GitHub</a></li>
+                <li>Genesys Framework <a href="http://www.github.com/GenesysSource/Foundation">Foundation on GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@using Framework.WebApp
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Framework Quick-Start for MVC</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top genesys-nav-bar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Genesys Framework Quick-Start for MVC", HomeController.IndexGetAction, HomeController.ControllerName, new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(CustomerController.SearchAction, CustomerController.SearchAction, CustomerController.ControllerName)</li>
+                    <li>@Html.ActionLink(CustomerController.CreateAction, CustomerController.CreateAction, CustomerController.ControllerName)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+     </div>
+    <footer>
+        <hr />
+        <p class="container">@(String.Format("Copyright (c) {0} {1}. All rights reserved.", DateTime.UtcNow.Year, "Genesys Source"))</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

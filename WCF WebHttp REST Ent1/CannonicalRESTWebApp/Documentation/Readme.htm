@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+
+<!--TO READ THIS HELP FILE, RIGHT-CLICK ON THE FILE NAME IN THE
+    SOLUTION EXPLORER WINDOW AND SELECT "VIEW IN BROWSER"-->
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>REST Service Web site Project Template</title>
+<style>
+<!--
+BODY         { font-family: Verdana; font-size: 67% }
+.maindiv     { background: url('Images/side-vc.gif') repeat-y; padding-left: 55px; padding-top: 5px; position: relative; height: 50px }
+P            { margin-top: 0; margin-bottom: 6px; line-height:130% }
+H1           { margin-top: 20px; margin-bottom: 12px; font-size:190% }
+H2           { color: #585F56; left: -55px; position: relative; margin-top: 21px; margin-bottom: 9px; font-size:170% }
+H3           { margin-top: 21px; margin-bottom: 9px; font-size: 140%;  font-weight: bold}
+H4           { margin-top: 18px; margin-bottom: 9px; font-size: 140%; font-weight: bold}
+OL           { margin-top: 0; margin-bottom: 9px; line-height:130%}
+UL           { margin-top: 0; margin-bottom: 9px; line-height:130%}
+LI           { margin-top: 0; margin-bottom: 6px }
+BLOCKQUOTE   { margin-left: 20px }
+TABLE        { padding: 4px; BACKGROUND: #f8f7ef; BORDER: #DDDCD6 1px solid; BORDER-COLLAPSE: collapse; margin-bottom: 9px; }
+TR           { vertical-align: top} 
+TD           { padding: 4px; font-family: Verdana; font-size: 67%; line-height: 130%} 
+.contents    { line-height: 150% }
+DIV.CodeBlock   { font-family: "Courier New"; font-size: 100%; margin-bottom: 6px; BACKGROUND: #f8f7ef; BORDER: #eeede6 1px solid; padding: 10px; }
+.CodeInline  { font-family: "Courier New" }
+.ProcedureLabel {margin-top: 12px; font-style: italic; font-weight: bold; color: #0D4CC3 } 
+.FileNameCol { padding: 6px; BACKGROUND: #eeede6; width=220px; font-weight: bold}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="20">
+<div class="maindiv">
+<a name="top"></a>
+<h1>REST Service Web Application Project Template</h1>
+
+<h2><A href="#top"><IMG src="Images\topjump-vc.gif" border=0></A><a name="Introduction">Introduction</a></h2>
+	<p>This template is designed to provide a simple example of a REST service that 
+        could be used to expose data and functionality through a programmable interface.&nbsp; 
+        This project uses the Windows Communication Foundation (WCF) to implement the 
+        RESTful service. The template service provides example operations that you can 
+        use as a starting point for implementing your own functionality.<br />
+        <br />
+        This project template creates a Web site that hosts a simple REST Service 
+        (Service1.svc) with 4 GET methods. The first one implements a &quot;HelloWorld&quot; operation 
+        based on the received parameters. The other three, expose GET operations related 
+        with a resource oriented approach. The last one creates an RSS feed for the 
+        resources.</p>
+
+<h2><A href="#top"><IMG src="Images\topjump-vc.gif" border=0 /></A><a name="RunningTheSolution">Running 
+    the Solution</a></h2>
+	<p>You can run it by performing these four simple steps: 	<ol>
+	    <li>Right-click the <b>Service1.svc</b> file.</li>
+	    <li>Select the <b>&quot;Set As Start Page&quot;</b> option.</li>
+	    <li>Pres <b>F5</b> to run the solution.</li>
+        <li>Press the <b>OK</b> button on the &quot;Debugging not Enabled&quot; dialog box.</li>
+	</ol>
+        
+    <p>
+        When the browser is loaded, you should see the result of the GetResources() 
+        operation. Check the following section for more information.</p>
+        
+<h2><A href="#top"><IMG src="Images\topjump-vc.gif" border=0></A><a name="TestingTheOperations">Testing 
+    the Operations</a></h2>
+    
+    <p>This default service provided by this project template includes 4 simple GET 
+        operations. Below, you can find more information about each of them, also 
+        describing how to test them:<ul>
+        <li><b>HelloWorld (string firstName, string lastName)</b><br />
+  Returns the &quot;Hello &lt;firstName&gt; &lt;lastName&gt;!&quot; string based on the received 
+            parameters (the last two URL's components).<br />
+            <br />
+            You can test this method by writing the following URL in your browser:             <pre>   http://localhost:&lt;WebSitePort&gt;/Service1.svc/John/Smith</pre>
+        </li>
+        <li><b>GetResources ()</b><br />This is the default service operation. Returns a list of mock resources. They 
+            are created inside the service constructor and a static collection keeps a 
+            reference to them.             <br />
+            <br />
+            You can test this method by writing the following URL in your browser:             <pre>   http://localhost:&lt;WebSitePort&gt;/Service1.svc/</pre>
+        </li>
+        <li><b>GetResource (string id)</b><br />Returns a specific resource based on the requested id. The id is searched inside 
+            a static collection to check if the solicited resource exists.<br />
+            <br />
+            You can test this method writing the following URL in your browser:<pre>   http://localhost:&lt;WebSitePort&gt;/Service1.svc/2</pre>Also, you can test what happens when you retrieve a resource that does not exist 
+            by using the following URL. You will get a &quot;404 - Not found&quot; error:<pre>   http://localhost:&lt;WebSitePort&gt;/Service1.svc/8</pre>
+        </li>
+        <li><b>GetResourcesRSS ()</b><br />Returns the list of mock resources in a RSS feed.<br />
+            <br />
+            You can test this method writing the following URL in your browser:   
+            <pre>   http://localhost:&lt;WebSitePort&gt;/Service1.svc/rss</pre>
+        </li>
+    </ul>
+
+<h2><A href="#top"><IMG src="Images\topjump-vc.gif" border=0></A><a name="Howcanyoucontinue">How 
+    to Move Forward?</a></h2>
+	
+	<p>At this point you have a starting solution for building your REST services. It is 
+        a very simple service that you can test as described above. Now you can continue 
+        in the following ways:<br />
+        &nbsp;<ul>
+        <li><b>Modifying the service (Service1.svc) and its operations to satisfy your 
+            requirements</b>
+            <br />
+            Probably, the operations defined in this example don&#39;t apply to your 
+            requirements. You may also want to rename some elements inside the code based on 
+            your scenario. To do this, the recommended tool to use is Visual Studio 
+            refactoring support, which automatically updates all the references to the 
+            renamed element, avoiding typing and compilation errors.
+            <br />
+            <br />
+            Also you may want more information on how to continue developing your RESTful 
+            services. In the following links you will find useful related information:
+            <ul>
+                <li><a href="http://msdn.microsoft.com/en-us/netframework/cc950529.aspx">REST in 
+                    Windows Communication Foundation (WCF)</a></li>
+                <li><a href="http://msdn.microsoft.com/en-us/library/dd203052.aspx">A Guide to 
+                    Designing and Building RESTful Web Services with WCF 3.5</a></li>
+            </ul>
+        </li>
+        <li><b>Using the commented POST/PUT/DELETE Methods</b>
+            <br />
+            Many times when you develop RESTful Services, you not only want to provide 
+            operations for retrieving resources (GET), but also you want to be able to add 
+            (POST), update (PUT) and delete (DELETE) resources. This template has also some 
+            examples on how these operations could be implemented inside a RESTful service. 
+            By default and to avoid confusions, the implementation of these operations inside 
+            the service (Service1.svc) are commented out and inside a region named &quot;Example 
+            of how to Add, Update, and Delete data using REST &amp; HTTP Verbs&quot;. You can 
+            uncomment the code and start to test it, to analyze how it works and reuse it in 
+            your application.
+            <br />
+            <br />
+            <b>Note:</b> When you use your browser to request a page, it 
+            performs a GET operation over the requested resource (URL). For this reason, you 
+            will not be able to test the POST/PUT/DELETE operations using your browser as 
+            you did for the GET operations. To do this, you can use an HTTP debugger tool 
+            like, for example, <a href="http://www.fiddler2.com/">Fiddler</a>.
+        </li>
+        <li><b>Adding REST services to the Web site to expose more functionality</b>
+            <br />
+            In addition to this project template, there is an item template that you can use 
+            to create new REST Services. It includes the same basic functionality shown in 
+            the Service1.svc. To use it follow the next steps:
+            <ol>
+                <li>Right-click the Web site project.</li>
+                <li>Point to the <b>Add</b> menu and click <b>New Item</b> option.</li>
+                <li>Inside the <b>Web</b> category, select the <b>REST Service</b> item template.</li>
+                <li>Set a name for the new service and finally, click the <b>Add</b> button.</li>
+            </ol>
+            <br />
+            Now that you have added the new REST service, you can modify it to match your 
+            needs.
+        </li>
+    </ul>
+<p>&nbsp;<p>
+        <a href="http://www.microsoft.com/info/cpyright.mspx">
+        © Microsoft Corporation and/or its suppliers. All rights reserved. Terms of Use.</a>
+        <p><img src="Images/dpe.jpg" alt="Developer & Platform Evangelism" /></p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="BasicIdentity_SxSExecution.Activity2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="BasicIdentity_SxSExecution.Activity2_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:local="clr-namespace:BasicIdentity_SxSExecution"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="name" />
+    </Sequence.Variables>
+    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="What is your name?" />
+    <local:WaitForInput x:TypeArguments="x:String" BookmarkName="ReadLine" DisplayName="ReadLine" sap2010:WorkflowViewState.IdRef="WaitForInput`1_1">
+      <local:WaitForInput.Result>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">name</mca:CSharpReference>
+        </OutArgument>
+      </local:WaitForInput.Result>
+    </local:WaitForInput>
+    <If sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean">!String.IsNullOrEmpty(name)</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2">
+          <InArgument x:TypeArguments="x:String">
+            <mca:CSharpValue x:TypeArguments="x:String">"Hello "+name</mca:CSharpValue>
+          </InArgument>
+        </WriteLine>
+      </If.Then>
+      <If.Else>
+        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Enter a name" />
+      </If.Else>
+    </If>
+    <sads:DebugSymbol.Symbol>d3tDOlxVc2Vyc1xoYW5pa25cRG9jdW1lbnRzXFZpc3VhbCBTdHVkaW8gRGV2MTFcUHJvamVjdHNcQmFzaWNJZGVudGl0eV9TeFNFeGVjdXRpb25cQmFzaWNJZGVudGl0eV9TeFNFeGVjdXRpb25cQWN0aXZpdHkyLnhhbWwLHwM9DgIBASMFI1oCAQ0kBSoaAgEKKwU7CgIBAiNDI1cCAQ4nCydVAgELLgsuZQIBAzIJNhUCAQc5CTlYAgEFNA00WAIBCDlHOVUCAQY=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="464,59" />
+      <sap2010:ViewStateData Id="WaitForInput`1_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="211,59" />
+      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="211,59" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,203" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="486,488">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BasicIdentity_SxSExecution.Activity2_1" sap:VirtualizedContainerService.HintSize="526,568" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

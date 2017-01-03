@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<items>
+	<item name="SiteTitle" value="WebApplication3" />
+	<item name="FormTitleMessageBox" value="Information" />
+	<item name="HtmlListDefaultItemLabel" value="Not selected..." />
+</items>
