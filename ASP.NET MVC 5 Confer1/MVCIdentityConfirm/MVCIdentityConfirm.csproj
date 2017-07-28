@@ -34,7 +34,7 @@
     <PublishDatabaseSettings>
       <Objects>
         <ObjectGroup Name="DefaultConnection 部署" Order="1">
-          <Destination Path="" />
+          <Destination Path="Data Source=CCHOST-PRO\SQLEXPRESS%3bIntegrated Security=True%3bConnect Timeout=15%3bEncrypt=False%3bTrustServerCertificate=True%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False" />
           <Object Type="DbFullSql">
             <PreSource Path="Data Source=%28LocalDb%29\v11.0%3bAttachDbFilename=|DataDirectory|\aspnet-MVCIdentityConfirm-20140303033156.mdf%3bInitial Catalog=aspnet-MVCIdentityConfirm-20140303033156%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
             <Source Path="obj\Debug\AutoScripts\DefaultConnection 部署_SchemaOnly.sql" Transacted="True" />
